@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site em Desenvolvimento</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
+      overflow:hidden;
+      color:white;
+      position:relative;
+    }
+
+    /* Bolhas decorativas */
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,255,255,0.08);
+      animation: float 6s infinite ease-in-out;
+    }
+
+    .circle:nth-child(1){
+      width:200px;
+      height:200px;
+      top:10%;
+      left:10%;
+    }
+
+    .circle:nth-child(2){
+      width:300px;
+      height:300px;
+      bottom:-100px;
+      right:-50px;
+      animation-delay:2s;
+    }
+
+    .circle:nth-child(3){
+      width:120px;
+      height:120px;
+      bottom:20%;
+      left:20%;
+      animation-delay:4s;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-20px);
+      }
+    }
+
+    .container{
+      text-align:center;
+      padding:50px;
+      max-width:700px;
+      background: rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      border-radius:25px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.3);
+      z-index:1;
+    }
+
+    h1{
+      font-size:3.5rem;
+      margin-bottom:20px;
+      background: linear-gradient(90deg, #ffffff, #93c5fd);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    p{
+      font-size:1.2rem;
+      color:#e2e8f0;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:12px 25px;
+      border-radius:50px;
+      background:#3b82f6;
+      color:white;
+      font-weight:bold;
+      letter-spacing:1px;
+      box-shadow:0 5px 20px rgba(59,130,246,0.5);
+      transition:0.3s;
+    }
+
+    .badge:hover{
+      transform:scale(1.05);
+      background:#60a5fa;
+    }
+
+    footer{
+      margin-top:35px;
+      color:#cbd5e1;
+      font-size:0.9rem;
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:2.5rem;
+      }
+
+      p{
+        font-size:1rem;
+      }
+
+      .container{
+        margin:20px;
+        padding:35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <div class="container">
+    <h1>🚧 Em Desenvolvimento</h1>
+
+    <p>
+      Trabalhando para trazer uma experiência incrível. <br>
+      O portfólio ainda está em desenvolvimento e em breve teremos novidades!
+    </p>
+
+    <div class="badge">
+      <a href="https://github.com/Rianoliveira-ofc">MEU GITHUB</a>
+    </div>
+
+    <footer>
+      © 2026 • Rian de Oliveira.
+    </footer>
+  </div>
+
+</body>
+</html>
